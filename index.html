@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>go-wasm-http-server hello demo</title>
     <script>
       navigator.serviceWorker.register('sw.js')
@@ -13,15 +11,18 @@
         const res = await fetch('api/hello', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            "Accept-Encoding":atob("Z3ppcCwgZGVmbGF0ZSwgYnI="),
+            'Content-Type': atob("YXBwbGljYXRpb24vanNvbg=="),
+            'User-Agent':navigator.userAgent,
           },
           body: JSON.stringify({ name })
         })
 
-        const { message, ip, ua,head } = await res.json()
+        const { message, ip, ua,head, sch } = await res.json()
         console.log(ip);
         console.log(ua);
         console.log(head);
+        console.log(sch);
         console.log(message);
       }
     </script>
