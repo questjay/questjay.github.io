@@ -101,5 +101,5 @@ let Wi = window;
 	
 	}
 document.addEventListener("DOMContentLoaded", function(event) {	
-dax("2");
+gins("2");
 });
